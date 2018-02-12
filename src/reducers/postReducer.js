@@ -1,4 +1,4 @@
-export default (state = [], action) => {
+export default (state = { posts: [] }, action) => {
   switch (action.type) {
     case 'GET_POSTS_SUCCESS':
       return action.posts;
