@@ -7,18 +7,18 @@ import { getPosts } from '../actions/posts';
 
 class Posts extends Component {
   componentDidMount() {
-    debugger;
     this.props.getPosts();
   }
 
   render() {
-    debugger;
+    const posts = this.props.posts.map(post => (
+      <PostCard key={post.id} post={post} />
+    ));
+
     return (
       <div>
         <h1>Posts Page</h1>
-        <div className="posts">
-          {/*this.props.posts.map(post => (<PostCard key={post.id} post={post} />))*/}
-        </div>
+        <div className="posts">{posts}</div>
         <PostForm />
       </div>
     );
@@ -27,7 +27,7 @@ class Posts extends Component {
 
 const mapStateToProps = state => {
   return {
-    posts: state.posts
+    posts: state.postReducer
   };
 };
 
