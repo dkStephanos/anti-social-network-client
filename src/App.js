@@ -11,7 +11,7 @@ class App extends Component {
     super();
 
     const params = getQueryParams();
-    this.state = { token: params.token };
+    this.state = { token: params.code };
   }
 
   isLoggedIn() {

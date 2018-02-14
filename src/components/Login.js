@@ -7,9 +7,10 @@ class Login extends Component {
     return (
       <div className="Login">
         <div className="Login-header">
-          <h2 className="Login-title">Flashcards</h2>
+          <h2 className="Login-title">Anti-Social Network</h2>
           <p className="Login-intro">
-            An app to learn any subject through spaced repetition.
+            A minimilistic take on social media that encourages an emphasis on
+            quality by restricting quantity.
           </p>
         </div>
         <div className="Login-buttons">
