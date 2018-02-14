@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Posts from './containers/Posts';
 import logo from './logo.svg';
+import Button from 'react-toolbox/lib/button/Button';
 import './App.css';
 
 class App extends Component {
@@ -10,6 +11,9 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </header>
+        <Button raised primary>
+          Hi!
+        </Button>
         <Posts />
       </div>
     );
