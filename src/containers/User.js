@@ -11,7 +11,6 @@ class User extends Component {
   }
 
   render() {
-    debugger;
     return (
       <div>
         <h1>User Page</h1>

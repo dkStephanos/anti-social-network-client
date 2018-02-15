@@ -15,7 +15,7 @@ const setUser = user => {
 // ** Async Actions **
 export const getUser = () => {
   return dispatch => {
-    return fetch(`${API_URL}/current_user`, {
+    return fetch(`${API_URL}/currentUser`, {
       method: 'GET',
       headers: {
         Accept: 'application/json',

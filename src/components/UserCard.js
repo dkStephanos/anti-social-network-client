@@ -1,4 +1,6 @@
 import React from 'react';
+import logo from '../logo.svg';
+import './UserCard.css';
 
 import {
   Card,
@@ -10,13 +12,16 @@ import {
 import { Button } from 'react-toolbox/lib/button/Button';
 
 const UserCard = ({ user }) => (
-  <Card style={{ width: '350px' }}>
-    <CardMedia aspectRatio="wide" image={user.avatar_url} />
-    <CardTitle title={user.username} />
+  <Card className="UserCard" raised style={{ width: '25%' }}>
+    <CardTitle avatar={logo} title={user.name} />
+    <CardMedia
+      className="UserAvatar"
+      aspectRatio="square"
+      image={user.avatar_url}
+    />
     <CardText>{user.bio}</CardText>
     <CardActions>
-      <Button label="Action 1" />
-      <Button label="Action 2" />
+      <Button label="Add Friend" />
     </CardActions>
   </Card>
 );
