@@ -3,11 +3,14 @@ import thunk from 'redux-thunk';
 
 import postReducer from './reducers/postReducer';
 import postFormReducer from './reducers/postFormReducer';
+import userReducer from './reducers/userReducer';
 
 const reducers = combineReducers({
   postReducer,
-  postFormReducer
+  postFormReducer,
+  userReducer
 });
+
 const middleware = [thunk];
 
 export default createStore(
