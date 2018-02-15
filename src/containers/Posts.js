@@ -11,7 +11,6 @@ class Posts extends Component {
   }
 
   render() {
-    debugger;
     const posts = this.props.posts.map(post => (
       <PostCard key={post.id} post={post} />
     ));
