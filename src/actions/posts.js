@@ -25,10 +25,10 @@ export const getPosts = () => {
     return fetch(`${API_URL}/posts`, {
       method: 'GET',
       headers: {
+        Accept: 'application/json',
         'Content-Type': 'application/json',
-        Authorization: `Bearer: ${params.code}`
-      },
-      body: JSON.stringify({})
+        Authorization: `${params.token}`
+      }
     })
       .then(response => response.json())
       .then(posts => dispatch(setPosts(posts)))
@@ -42,7 +42,7 @@ export const createPost = post => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer: ${params.code}`
+        Authorization: `${params.token}`
       },
       body: JSON.stringify({ post: post })
     })
