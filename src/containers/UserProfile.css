@@ -1,0 +1,11 @@
+.userData {
+  display: inline-block;
+  float: left;
+  size: 50%;
+}
+
+.userConnectionsPosts {
+  display: inline-block;
+  float: right;
+  size: 50%;
+}
