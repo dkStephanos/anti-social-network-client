@@ -9,7 +9,6 @@ import {
   CardText,
   CardActions
 } from 'react-toolbox/lib/card';
-import { Button } from 'react-toolbox/lib/button/Button';
 
 const UserCard = ({ user }) => (
   <Card className="UserCard" raised accent>
@@ -20,9 +19,7 @@ const UserCard = ({ user }) => (
       image={user.avatar_url}
     />
     <CardText>{user.bio}</CardText>
-    <CardActions>
-      <Button label="Add Friend" />
-    </CardActions>
+    <CardActions />
   </Card>
 );
 

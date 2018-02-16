@@ -3,6 +3,7 @@
   display: inline-block;
   float: left;
   padding-left: 5%;
+  height: 50%;
 }
 .userConnectionPosts {
   width: 40%;
@@ -11,10 +12,16 @@
 }
 
 .panelContent {
-  height: 80%;
+  height: 50%;
 }
 
 .navLink {
-  padding-bottom: 5%;
-  text-decoration-color: purple;
+  padding-bottom: 10%;
+  background: cyan;
+  text-decoration-color: white;
+  text-align: center;
+}
+
+.navLink:hover {
+  background: teal;
 }
