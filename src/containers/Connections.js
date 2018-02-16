@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import List from 'react-toolbox/lib/list/List';
 import ListItem from 'react-toolbox/lib/list/ListItem';
 import ListSubHeader from 'react-toolbox/lib/list/ListSubHeader';
-import ListDivider from 'react-toolbox/lib/list/ListDivider';
-import ListCheckbox from 'react-toolbox/lib/list/ListCheckbox';
 import { connect } from 'react-redux';
 
 import { getConnections } from '../actions/connections';
@@ -20,7 +18,6 @@ class Connections extends Component {
         avatar={connection.avatar_url}
         caption={connection.login}
         legend={connection.name}
-        rightIcon="star"
       />
     ));
 

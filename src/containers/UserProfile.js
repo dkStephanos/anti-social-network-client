@@ -6,6 +6,8 @@ import Layout from 'react-toolbox/lib/layout/Layout';
 import NavDrawer from 'react-toolbox/lib/layout/NavDrawer';
 import Panel from 'react-toolbox/lib/layout/Panel';
 import Sidebar from 'react-toolbox/lib/layout/Sidebar';
+import Navigation from 'react-toolbox/lib/navigation/Navigation';
+import Link from 'react-toolbox/lib/link/Link';
 
 import User from './User';
 import Posts from './Posts';
@@ -40,7 +42,29 @@ class UserProfile extends React.Component {
           permanentAt="xxxl"
           onOverlayClick={this.toggleDrawerActive}
         >
-          <p>Navigation, account switcher, etc. go here.</p>
+          <Navigation type="vertical">
+            <Link
+              className="navLink"
+              href="http://"
+              active
+              raised
+              label="Profile"
+            />
+            <Link
+              className="navLink"
+              href="http://"
+              active
+              raised
+              label="Add Connections"
+            />
+            <Link
+              className="navLink"
+              href="http://"
+              active
+              raised
+              label="View Posts"
+            />
+          </Navigation>
         </NavDrawer>
 
         <Panel>

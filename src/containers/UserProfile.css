@@ -13,3 +13,8 @@
 .panelContent {
   height: 80%;
 }
+
+.navLink {
+  padding-bottom: 5%;
+  text-decoration-color: purple;
+}
