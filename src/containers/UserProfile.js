@@ -68,7 +68,11 @@ class UserProfile extends React.Component {
         </NavDrawer>
 
         <Panel>
-          <AppBar leftIcon="menu" onLeftIconClick={this.toggleDrawerActive} />
+          <AppBar
+            leftIcon="menu"
+            title="Anti-Social Network"
+            onLeftIconClick={this.toggleDrawerActive}
+          />
           <div>
             <div className="panelContent">
               <div className="userData">
