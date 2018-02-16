@@ -6,6 +6,9 @@ import Login from './components/Login';
 import Main from './components/Main';
 import './App.css';
 
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap-theme.css';
+
 class App extends Component {
   constructor() {
     super();

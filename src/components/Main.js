@@ -6,7 +6,6 @@ import UserProfile from '../containers/UserProfile';
 const Main = () => (
   <div>
     <UserProfile />
-    <Posts />
   </div>
 );
 

@@ -12,7 +12,7 @@ import {
 import { Button } from 'react-toolbox/lib/button/Button';
 
 const UserCard = ({ user }) => (
-  <Card className="UserCard" raised accent style={{ width: '25%' }}>
+  <Card className="UserCard" raised accent>
     <CardTitle avatar={logo} title={user.name} />
     <CardMedia
       className="UserAvatar"

@@ -1,11 +1,15 @@
 .userData {
+  min-width: 40%;
   display: inline-block;
   float: left;
-  size: 50%;
+  padding-left: 5%;
 }
-
-.userConnectionsPosts {
+.userConnectionPosts {
+  width: 40%;
   display: inline-block;
   float: right;
-  size: 50%;
+}
+
+.panelContent {
+  height: 80%;
 }

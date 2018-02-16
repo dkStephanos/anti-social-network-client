@@ -3,7 +3,6 @@
   border-radius: 5px;
   border-style: none;
   color: #fff;
-  padding: 10px 20px;
   font-size: 1.25em;
   text-decoration: none;
 }
@@ -16,5 +15,4 @@
 .UserAvatar {
   border: 3px;
   border-width: 2px;
-  border-color: red;
 }

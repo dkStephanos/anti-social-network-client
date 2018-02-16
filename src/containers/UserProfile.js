@@ -8,6 +8,8 @@ import Panel from 'react-toolbox/lib/layout/Panel';
 import Sidebar from 'react-toolbox/lib/layout/Sidebar';
 
 import User from './User';
+import Posts from './Posts';
+import './UserProfile.css';
 
 class UserProfile extends React.Component {
   state = {
@@ -39,20 +41,26 @@ class UserProfile extends React.Component {
         >
           <p>Navigation, account switcher, etc. go here.</p>
         </NavDrawer>
+
         <Panel>
           <AppBar leftIcon="menu" onLeftIconClick={this.toggleDrawerActive} />
-          <div style={{ flex: 1, overflowY: 'auto', padding: '1.8rem' }}>
-            <div className="userData">
-              <User />
-              <Button
-                label="Show Connections"
-                raised
-                onClick={this.toggleSidebar}
-              />
+          <div>
+            <div className="panelContent">
+              <div className="userData">
+                <User />
+                <Button
+                  label="Show Connections"
+                  raised
+                  onClick={this.toggleSidebar}
+                />
+              </div>
+              <div className="userConnectionsPosts">
+                <Posts />
+              </div>
             </div>
-            <div className="userConnectionsPosts" />
           </div>
         </Panel>
+
         <Sidebar pinned={this.state.sidebarPinned} width={5}>
           <div>
             <IconButton icon="close" onClick={this.toggleSidebar} />
