@@ -9,6 +9,7 @@ import Sidebar from 'react-toolbox/lib/layout/Sidebar';
 
 import User from './User';
 import Posts from './Posts';
+import Connections from './Connections';
 import './UserProfile.css';
 
 class UserProfile extends React.Component {
@@ -66,7 +67,7 @@ class UserProfile extends React.Component {
             <IconButton icon="close" onClick={this.toggleSidebar} />
           </div>
           <div style={{ flex: 1 }}>
-            <p>Supplemental content goes here.</p>
+            <Connections />
           </div>
         </Sidebar>
       </Layout>

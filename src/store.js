@@ -4,11 +4,13 @@ import thunk from 'redux-thunk';
 import postReducer from './reducers/postReducer';
 import postFormReducer from './reducers/postFormReducer';
 import userReducer from './reducers/userReducer';
+import connectionReducer from './reducers/connectionReducer';
 
 const reducers = combineReducers({
   postReducer,
   postFormReducer,
-  userReducer
+  userReducer,
+  connectionReducer
 });
 
 const middleware = [thunk];
