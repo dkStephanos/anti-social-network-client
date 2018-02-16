@@ -12,14 +12,20 @@ class Connections extends Component {
   }
 
   render() {
-    const connections = this.props.connections.map(connection => (
-      <ListItem
-        key={connection.id}
-        avatar={connection.avatar_url}
-        caption={connection.login}
-        legend={connection.name}
-      />
-    ));
+    let connections = undefined;
+
+    if (this.props.connections) {
+      connections = this.props.connections.map(connection => (
+        <ListItem
+          key={connection.id}
+          avatar={connection.avatar_url}
+          caption={connection.login}
+          legend={connection.name}
+        />
+      ));
+    } else {
+      connections = <ListSubHeader caption="No Connections" />;
+    }
 
     return (
       <div className="connectionsContainer">
