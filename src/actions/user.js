@@ -1,8 +1,8 @@
 import { resetPostForm } from './postForm';
-import { getQueryParams } from '../utils';
+import { auth } from '../utils/init';
 
 const API_URL = process.env.REACT_APP_API_URL;
-const params = getQueryParams();
+const token = auth.getToken();
 
 // ** Action Creators **
 const setUser = user => {
@@ -20,7 +20,7 @@ export const getUser = () => {
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
-        Authorization: `${params.token}`
+        Authorization: `${token}`
       }
     })
       .then(response => response.json())

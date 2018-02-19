@@ -1,8 +1,8 @@
 import { resetPostForm } from './postForm';
-import { getQueryParams } from '../utils';
+import { auth } from '../utils/init';
 
 const API_URL = process.env.REACT_APP_API_URL;
-const params = getQueryParams();
+const token = auth.getToken();
 
 // ** Action Creators **
 const setPosts = posts => {
@@ -27,7 +27,7 @@ export const getPosts = () => {
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
-        Authorization: `${params.token}`
+        Authorization: `${token}`
       }
     })
       .then(response => response.json())
@@ -42,7 +42,7 @@ export const createPost = post => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `${params.token}`
+        Authorization: `${token}`
       },
       body: JSON.stringify({ post: post })
     })
