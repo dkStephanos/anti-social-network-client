@@ -1,5 +1,7 @@
 import { auth } from '../utils/init';
 import React, { Component } from 'react';
+import logo from '../logo.svg';
+import './LoginTransition.css';
 
 class LoginTransition extends Component {
   componentDidMount() {
@@ -10,7 +12,7 @@ class LoginTransition extends Component {
   render() {
     return (
       <div className="login-transition">
-        <i className="fa fa-spinner fa-spin fa-5x color-font-aqua" />
+        <img src={logo} className="Loading-logo" alt="logo" />
       </div>
     );
   }
