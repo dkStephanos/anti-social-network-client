@@ -4,7 +4,7 @@ import ListItem from 'react-toolbox/lib/list/ListItem';
 import ListSubHeader from 'react-toolbox/lib/list/ListSubHeader';
 import { connect } from 'react-redux';
 
-import { getConnections } from '../actions/connections';
+import { getConnections } from '../../actions/connections';
 
 class Connections extends Component {
   componentDidMount() {

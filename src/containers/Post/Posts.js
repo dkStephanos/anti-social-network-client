@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import PostForm from '../containers/PostForm';
-import PostCard from '../components/PostCard';
-import { getPosts } from '../actions/posts';
+import PostForm from './PostForm';
+import PostCard from '../../components/Post/PostCard';
+import { getPosts } from '../../actions/posts';
 
 class Posts extends Component {
   componentDidMount() {

@@ -10,8 +10,8 @@ import Navigation from 'react-toolbox/lib/navigation/Navigation';
 import Link from 'react-toolbox/lib/link/Link';
 
 import User from './User';
-import Posts from './Posts';
-import Connections from './Connections';
+import Posts from '../Post/Posts';
+import Connections from '../Connection/Connections';
 import './UserProfile.css';
 
 class UserProfile extends React.Component {

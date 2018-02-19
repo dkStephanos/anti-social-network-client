@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { updatePostFormData } from '../actions/postForm';
-import { createPost } from '../actions/posts';
+import { updatePostFormData } from '../../actions/postForm';
+import { createPost } from '../../actions/posts';
 
 class PostForm extends Component {
   handleOnChange = event => {

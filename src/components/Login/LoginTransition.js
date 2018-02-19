@@ -1,6 +1,6 @@
-import { auth } from '../utils/init';
+import { auth } from '../../utils/init';
 import React, { Component } from 'react';
-import logo from '../logo.svg';
+import logo from '../../logo.svg';
 import './LoginTransition.css';
 
 class LoginTransition extends Component {

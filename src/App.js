@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Posts from './containers/Posts';
+import Posts from './containers/Post/Posts';
 import logo from './logo.svg';
-import Login from './components/Login';
+import Login from './components/Login/Login';
 import Main from './components/Main';
 import './App.css';
 
