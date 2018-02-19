@@ -11,7 +11,6 @@ class Posts extends Component {
   }
 
   render() {
-    debugger;
     const posts = this.props.posts.map(post => (
       <PostCard key={post.id} post={post} />
     ));
@@ -20,7 +19,6 @@ class Posts extends Component {
       <div>
         <h1>Posts Page</h1>
         <div className="posts">{posts}</div>
-        <PostForm />
       </div>
     );
   }

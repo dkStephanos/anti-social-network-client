@@ -1,0 +1,21 @@
+.user-list-item {
+  width: 30%;
+  height: 75%;
+  margin: 0 auto;
+  padding-bottom: 3%;
+}
+
+.add-connection-button {
+  background-color: #0077b3;
+  border-radius: 5px;
+  border-style: none;
+  color: #fff;
+  text-decoration: none;
+  text-transform: none;
+  text-decoration-color: white;
+}
+
+.add-connection-button:hover {
+  background-color: #0099e6;
+  color: #fff;
+}

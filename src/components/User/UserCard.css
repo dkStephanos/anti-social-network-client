@@ -15,4 +15,5 @@
 .UserAvatar {
   border: 3px;
   border-width: 2px;
+  size: 50%;
 }

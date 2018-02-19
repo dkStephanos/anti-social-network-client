@@ -11,6 +11,7 @@ import Login from './components/Login/Login';
 import LoginTransition from './components/Login/LoginTransition';
 import LogoutTransition from './components/Login/LogoutTransition';
 import UserProfile from './components/User/UserProfile';
+import UsersList from './containers/User/UsersList';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import { Switch } from 'react-router';
 import Main from './components/Main';
@@ -24,6 +25,7 @@ ReactDOM.render(
             <Route path="/auth" component={LoginTransition} />
             <Route path="/logout" component={LogoutTransition} />
             <Route path="/home" component={UserProfile} />
+            <Route path="/users" component={UsersList} />
             <Route exact path="/" component={Login} />
           </Switch>
         </App>

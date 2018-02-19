@@ -11,6 +11,7 @@ class User extends Component {
   }
 
   render() {
+    debugger;
     return (
       <div className="userContainer">
         <div className="user">
