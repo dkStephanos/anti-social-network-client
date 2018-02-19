@@ -40,7 +40,9 @@ class App extends Component {
       <AppBar
         leftIcon="menu"
         title="Anti-Social Network"
+        rightIcon="..."
         onLeftIconClick={this.toggleDrawerActive}
+        onRightIconClick={this.toggleSidebar}
         className="app-bar"
       />
     ) : (
