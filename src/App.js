@@ -83,6 +83,13 @@ class App extends Component {
                 raised
                 label="View Posts"
               />
+              <Link
+                className="navLink"
+                href="/logout"
+                active
+                raised
+                label="Logout"
+              />
             </Navigation>
           </NavDrawer>
 

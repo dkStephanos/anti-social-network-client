@@ -4,8 +4,8 @@ import { auth } from '../../utils/init';
 import './Login.css';
 
 class Login extends Component {
-  componentDidMount() {
-    if (auth.loggedIn) {
+  componentWillMount() {
+    if (auth.loggedIn()) {
       window.location.replace('/home');
     }
   }
