@@ -64,7 +64,7 @@ class App extends Component {
             <Navigation type="vertical">
               <Link
                 className="navLink"
-                href="http://"
+                href="/home"
                 active
                 raised
                 label="Profile"

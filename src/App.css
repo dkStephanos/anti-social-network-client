@@ -26,6 +26,17 @@
   visibility: visible;
 }
 
+.navLink {
+  padding-bottom: 10%;
+  background: cyan;
+  text-decoration-color: white;
+  text-align: center;
+}
+
+.navLink:hover {
+  background: teal;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

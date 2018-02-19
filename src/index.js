@@ -9,7 +9,7 @@ import ThemeProvider from 'react-toolbox/lib/ThemeProvider';
 import theme from './toolbox/theme';
 import Login from './components/Login/Login';
 import LoginTransition from './components/Login/LoginTransition';
-import UserProfile from './containers/User/UserProfile';
+import UserProfile from './components/User/UserProfile';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import { Switch } from 'react-router';
 import Main from './components/Main';
