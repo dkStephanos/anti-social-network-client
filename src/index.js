@@ -12,6 +12,7 @@ import LoginTransition from './components/Login/LoginTransition';
 import UserProfile from './containers/User/UserProfile';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import { Switch } from 'react-router';
+import Main from './components/Main';
 
 ReactDOM.render(
   <Provider store={store}>
