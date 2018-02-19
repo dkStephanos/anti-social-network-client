@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
 import LoginButton from './LoginButton';
+import { auth } from '../../utils/init';
 import './Login.css';
 
 class Login extends Component {
+  componentDidMount() {
+    if (auth.loggedIn) {
+      window.location.replace('/home');
+    }
+  }
+
   render() {
     return (
       <div className="Login">
