@@ -11,6 +11,10 @@ class Connections extends Component {
     this.props.getConnections();
   }
 
+  redirectToShowPage = connection => {
+    window.location.replace(`/users/${connection.id.toString()}`);
+  };
+
   render() {
     let connections = undefined;
 
@@ -21,6 +25,7 @@ class Connections extends Component {
           avatar={connection.avatar_url}
           caption={connection.login}
           legend={connection.name}
+          onClick={() => this.redirectToShowPage(connection)}
         />
       ));
     } else {
