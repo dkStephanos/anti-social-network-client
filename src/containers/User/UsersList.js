@@ -4,34 +4,34 @@ import Button from 'react-toolbox/lib/button/Button';
 
 import UserCard from '../../components/User/UserCard';
 import { getUsers } from '../../actions/user';
-import { getConnections } from '../../actions/connections';
+import { getConnectionsIds, createConnection } from '../../actions/connections';
 import './UserList.css';
 
 class UsersList extends Component {
   componentDidMount() {
-    this.props.getConnections();
     this.props.getUsers();
+    this.props.getConnectionsIds();
   }
 
-  addConnection = () => {};
+  addConnection = connection => {
+    debugger;
+    this.props.createConnection(connection.currentTarget.attributes[0].value);
+  };
 
   render() {
-    debugger;
     const users = this.props.users.map(user => (
       <div className="user-list-item">
         <UserCard className="user-card" key={user.id} user={user} />
-        {this.props.connections.map(
-          connection =>
-            connection.id === user.id ? (
-              <Button
-                className="add-connection-button"
-                onClick={this.addConnection}
-              >
-                Add Connection
-              </Button>
-            ) : (
-              ''
-            )
+        {this.props.connectionsIds.includes(user.id) ? (
+          ''
+        ) : (
+          <Button
+            className="add-connection-button"
+            userId={user.id}
+            onClick={this.addConnection}
+          >
+            Add Connection
+          </Button>
         )}
       </div>
     ));
@@ -48,10 +48,12 @@ class UsersList extends Component {
 const mapStateToProps = state => {
   return {
     users: state.userReducer,
-    connections: state.connectionReducer
+    connectionsIds: state.connectionReducer
   };
 };
 
-export default connect(mapStateToProps, { getUsers, getConnections })(
-  UsersList
-);
+export default connect(mapStateToProps, {
+  getUsers,
+  getConnectionsIds,
+  createConnection
+})(UsersList);
