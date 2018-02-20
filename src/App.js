@@ -71,14 +71,14 @@ class App extends Component {
               />
               <Link
                 className="navLink"
-                href="http://"
+                href="/users"
                 active
                 raised
                 label="Add Connections"
               />
               <Link
                 className="navLink"
-                href="http://"
+                href="/posts"
                 active
                 raised
                 label="View Posts"
