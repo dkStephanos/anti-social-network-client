@@ -36,6 +36,22 @@ export const getUser = () => {
   };
 };
 
+export const getUserById = userId => {
+  return dispatch => {
+    return fetch(`${API_URL}/users/${userId}`, {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+        Authorization: `${token}`
+      }
+    })
+      .then(response => response.json())
+      .then(user => dispatch(setUser(user)))
+      .catch(error => console.log(error));
+  };
+};
+
 export const getUsers = () => {
   return dispatch => {
     return fetch(`${API_URL}/users`, {

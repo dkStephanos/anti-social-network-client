@@ -16,6 +16,7 @@ import { Route, BrowserRouter as Router } from 'react-router-dom';
 import { Switch } from 'react-router';
 import Posts from './containers/Post/Posts';
 import UserConnectionsPosts from './containers/Post/UserConnectionsPosts';
+import UserShow from './containers/User/UserShow';
 
 ReactDOM.render(
   <Provider store={store}>
@@ -26,6 +27,7 @@ ReactDOM.render(
             <Route path="/auth" component={LoginTransition} />
             <Route path="/logout" component={LogoutTransition} />
             <Route path="/home" component={UserProfile} />
+            <Route path="/users/:userId" component={UserShow} />
             <Route path="/users" component={UsersList} />
             <Route path="/posts" component={Posts} />
             <Route path="/postFeed" component={UserConnectionsPosts} />
