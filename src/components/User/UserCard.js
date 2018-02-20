@@ -12,7 +12,7 @@ import {
 
 const UserCard = ({ user }) => (
   <Card className="UserCard" raised>
-    <CardTitle avatar={logo} title={user.name} />
+    <CardTitle avatar={logo} subtitle={user.name} title={user.login} />
     <CardMedia
       className="UserAvatar"
       aspectRatio="square"
