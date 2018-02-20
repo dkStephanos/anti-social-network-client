@@ -1,6 +1,6 @@
 import React from 'react';
 import User from '../../containers/User/User';
-import Posts from '../../containers/Post/Posts';
+import UserPosts from '../../containers/Post/UserPosts';
 import './UserProfile.css';
 
 const UserProfile = () => {
@@ -10,7 +10,7 @@ const UserProfile = () => {
         <User />
       </div>
       <div className="userConnectionsPosts">
-        <Posts />
+        <UserPosts />
       </div>
     </div>
   );
