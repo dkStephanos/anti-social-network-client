@@ -3,14 +3,27 @@
   display: inline-block;
   float: left;
   padding-left: 5%;
+  padding-right: 5%;
+  height: 33%;
+  flex-flow: column;
+}
+
+.userCard {
   height: 50%;
 }
-.userConnectionPosts {
-  width: 40%;
+
+.userConnectionsPosts {
+  width: 60%;
   display: inline-block;
   float: right;
+  overflow-y: scroll;
+  flex-flow: column;
+
+  border: 1px solid black;
 }
 
 .panelContent {
+  padding-top: 2%;
+  padding-right: 3%;
   height: 50%;
 }

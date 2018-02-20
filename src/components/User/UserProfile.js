@@ -7,7 +7,7 @@ const UserProfile = () => {
   return (
     <div className="panelContent">
       <div className="userData">
-        <User />
+        <User className="userCard" />
       </div>
       <div className="userConnectionsPosts">
         <UserPosts />
