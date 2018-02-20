@@ -18,12 +18,13 @@
   float: right;
   overflow-y: scroll;
   flex-flow: column;
-
+  display: flex;
   border: 1px solid black;
+  max-height: 800px;
+  text-align: center;
 }
 
 .panelContent {
   padding-top: 2%;
   padding-right: 3%;
-  height: 50%;
 }

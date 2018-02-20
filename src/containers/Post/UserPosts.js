@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import PostForm from './PostForm';
 import PostCard from '../../components/Post/PostCard';
 import { getUserPosts } from '../../actions/posts';
+import './UserPosts.css';
 
 class UserPosts extends Component {
   componentDidMount() {
@@ -12,7 +13,9 @@ class UserPosts extends Component {
 
   render() {
     const posts = this.props.posts.map(post => (
-      <PostCard key={post.id} post={post} />
+      <div className="postCard">
+        <PostCard key={post.id} post={post} />
+      </div>
     ));
 
     return (
