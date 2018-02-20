@@ -11,7 +11,7 @@ import {
 } from 'react-toolbox/lib/card';
 
 const UserCard = ({ user }) => (
-  <Card className="UserCard" raised accent>
+  <Card className="UserCard" raised>
     <CardTitle avatar={logo} title={user.name} />
     <CardMedia
       className="UserAvatar"

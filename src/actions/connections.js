@@ -11,6 +11,12 @@ const setConnections = connections => {
   };
 };
 
+const resetConnections = () => {
+  return {
+    type: 'GET_CONNECTIONS'
+  };
+};
+
 const setConnectionsIds = connectionsIds => {
   return {
     type: 'GET_CONNECTIONS_IDS_SUCCESS',

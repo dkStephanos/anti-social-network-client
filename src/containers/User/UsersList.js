@@ -14,20 +14,22 @@ class UsersList extends Component {
   }
 
   addConnection = connection => {
-    debugger;
+    // Hides the clicked button
+    connection.currentTarget.style.visibility = 'hidden';
+    // Passes in the value of 'userId' of the clicked button
     this.props.createConnection(connection.currentTarget.attributes[0].value);
   };
 
   render() {
     const users = this.props.users.map(user => (
-      <div className="user-list-item">
-        <UserCard className="user-card" key={user.id} user={user} />
+      <div key={user.id} className="user-list-item">
+        <UserCard className="user-card" user={user} />
         {this.props.connectionsIds.includes(user.id) ? (
           ''
         ) : (
           <Button
             className="add-connection-button"
-            userId={user.id}
+            userid={user.id}
             onClick={this.addConnection}
           >
             Add Connection
