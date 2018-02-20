@@ -13,17 +13,17 @@ export default class AuthService {
 
   setToken(idToken) {
     // Saves user token to local storage
-    localStorage.setItem('id_token', idToken);
+    sessionStorage.setItem('id_token', idToken);
   }
 
   getToken() {
     // Retrieves the user token from local storage
-    return localStorage.getItem('id_token');
+    return sessionStorage.getItem('id_token');
   }
 
   logout() {
     // Clear user token and profile data from local storage
-    localStorage.removeItem('id_token');
+    sessionStorage.removeItem('id_token');
     window.location.replace('/');
   }
 
