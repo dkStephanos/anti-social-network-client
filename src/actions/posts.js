@@ -52,6 +52,22 @@ export const getUserPosts = () => {
   };
 };
 
+export const getUserConnectionsPosts = () => {
+  return dispatch => {
+    return fetch(`${API_URL}/connections_posts`, {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+        Authorization: `${token}`
+      }
+    })
+      .then(response => response.json())
+      .then(posts => dispatch(setPosts(posts)))
+      .catch(error => console.log(error));
+  };
+};
+
 export const createPost = post => {
   return dispatch => {
     return fetch(`${API_URL}/posts`, {

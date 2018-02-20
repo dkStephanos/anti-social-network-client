@@ -15,6 +15,7 @@ import UsersList from './containers/User/UsersList';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import { Switch } from 'react-router';
 import Posts from './containers/Post/Posts';
+import UserConnectionsPosts from './containers/Post/UserConnectionsPosts';
 
 ReactDOM.render(
   <Provider store={store}>
@@ -27,6 +28,7 @@ ReactDOM.render(
             <Route path="/home" component={UserProfile} />
             <Route path="/users" component={UsersList} />
             <Route path="/posts" component={Posts} />
+            <Route path="/postFeed" component={UserConnectionsPosts} />
             <Route exact path="/" component={Login} />
           </Switch>
         </App>

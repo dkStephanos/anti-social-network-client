@@ -78,10 +78,17 @@ class App extends Component {
               />
               <Link
                 className="navLink"
+                href="/postFeed"
+                active
+                raised
+                label="Post Feed"
+              />
+              <Link
+                className="navLink"
                 href="/posts"
                 active
                 raised
-                label="View Posts"
+                label="All Posts"
               />
               <Link
                 className="navLink"
