@@ -3,12 +3,16 @@ import { connect } from 'react-redux';
 
 import PostForm from './PostForm';
 import PostCard from '../../components/Post/PostCard';
-import { getUserPosts } from '../../actions/posts';
+import { getCurrentUserPosts, getUserPosts } from '../../actions/posts';
 import './UserPosts.css';
 
 class UserPosts extends Component {
   componentDidMount() {
-    this.props.getUserPosts();
+    if (this.props.userid) {
+      this.props.getUserPosts(this.props.userid);
+    } else {
+      this.props.getCurrentUserPosts();
+    }
   }
 
   render() {
@@ -33,4 +37,6 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, { getUserPosts })(UserPosts);
+export default connect(mapStateToProps, { getCurrentUserPosts, getUserPosts })(
+  UserPosts
+);

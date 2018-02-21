@@ -19,7 +19,7 @@ class UserShow extends Component {
           <User className="userCard" />
         </div>
         <div className="userConnectionsPosts">
-          <UserPosts />
+          <UserPosts userid={this.props.userId} />
         </div>
       </div>
     );

@@ -36,9 +36,25 @@ export const getPosts = () => {
   };
 };
 
-export const getUserPosts = () => {
+export const getCurrentUserPosts = () => {
   return dispatch => {
     return fetch(`${API_URL}/currentUser_posts`, {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+        Authorization: `${token}`
+      }
+    })
+      .then(response => response.json())
+      .then(posts => dispatch(setPosts(posts)))
+      .catch(error => console.log(error));
+  };
+};
+
+export const getUserPosts = userId => {
+  return dispatch => {
+    return fetch(`${API_URL}/user_posts/${userId}`, {
       method: 'GET',
       headers: {
         Accept: 'application/json',
