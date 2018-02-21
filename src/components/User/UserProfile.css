@@ -12,6 +12,13 @@
   height: 50%;
 }
 
+.postFormCard {
+  display: inline-block;
+  float: bottom;
+  padding-top: 2%;
+  flex-flow: column;
+}
+
 .userConnectionsPosts {
   width: 60%;
   display: inline-block;
@@ -27,4 +34,5 @@
 .panelContent {
   padding-top: 2%;
   padding-right: 3%;
+  flex-wrap: wrap;
 }

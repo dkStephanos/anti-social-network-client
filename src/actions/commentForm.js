@@ -1,7 +1,7 @@
 // ** Action Creators **
 export const updateCommentFormData = commentFormData => {
   return {
-    type: 'UPDATED_DATA',
+    type: 'UPDATED_COMMENT_DATA',
     commentFormData
   };
 };
