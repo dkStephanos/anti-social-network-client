@@ -19,13 +19,15 @@ class PostForm extends Component {
   };
 
   render() {
-    const { content } = this.props.postFormData;
+    const { title, content } = this.props.postFormData;
 
     return (
       <div>
         Add A Post
         <form onSubmit={this.handleOnSubmit}>
           <div>
+            <label htmlFor="title">Title:</label>
+            <input onChange={this.handleOnChange} name="title" value={title} />
             <label htmlFor="content">Content:</label>
             <textarea
               onChange={this.handleOnChange}
