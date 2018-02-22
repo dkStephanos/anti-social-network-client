@@ -11,3 +11,17 @@ export const resetPostForm = () => {
     type: 'RESET_POST_FORM'
   };
 };
+
+export const removeSelectedImage = () => {
+  return {
+    type: 'REMOVE_SELECTED_IMAGE'
+  };
+};
+
+export const changeSelectedImage = (selectedImage, imageURL) => {
+  return {
+    type: 'CHANGE_SELECTED_IMAGE',
+    selectedImage,
+    imageURL
+  };
+};
