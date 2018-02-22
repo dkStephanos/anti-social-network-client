@@ -7,6 +7,7 @@ import {
   changeSelectedImage
 } from '../../actions/postForm';
 import { createPost } from '../../actions/posts';
+import './PostForm.css';
 
 class PostForm extends Component {
   handleOnChange = event => {
@@ -19,6 +20,7 @@ class PostForm extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault();
+    debugger;
     this.props.createPost(this.props.postFormData);
   };
 
@@ -28,20 +30,21 @@ class PostForm extends Component {
 
   handleImageChange = () => {
     let selectedImage = this.refs.imageUploadField.files[0];
-    let reader = new FileReader();
+    if (selectedImage) {
+      let reader = new FileReader();
 
-    reader.onloadend = function(e) {
-      this.props.changeSelectedImage(selectedImage, reader.result);
-    }.bind(this);
+      reader.onloadend = function(e) {
+        this.props.changeSelectedImage(selectedImage, reader.result);
+      }.bind(this);
 
-    let imageURL = reader.readAsDataURL(selectedImage);
+      let imageURL = reader.readAsDataURL(selectedImage);
+    }
   };
 
   render() {
     const { title, content } = this.props.postFormData;
-    debugger;
     return (
-      <div>
+      <div className="PostForm">
         Add A Post
         <form onSubmit={this.handleOnSubmit}>
           <div>
@@ -80,7 +83,7 @@ class PostForm extends Component {
               </label>
             </div>
 
-            <div>
+            <div className="photoData">
               <div className="photo">
                 <img
                   width={150}
@@ -99,7 +102,7 @@ class PostForm extends Component {
                 </div>
               </div>
               <div className="file-name">
-                {this.props.postFormData.selectedImageForUpload.name}
+                {this.props.postFormData.photo.name}
               </div>
             </div>
           </div>

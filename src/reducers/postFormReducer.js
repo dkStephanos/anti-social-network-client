@@ -2,7 +2,7 @@ const initialState = {
   formData: {
     title: '',
     content: '',
-    selectedImageForUpload: '',
+    photo: '',
     imageURL: ''
   },
   formStatus: {
@@ -22,14 +22,14 @@ export default (state = initialState, action) => {
 
     case 'REMOVE_SELECTED_IMAGE':
       return Object.assign({}, state, {
-        formData: { ...state.formData, selectedImageForUpload: '' }
+        formData: { ...state.formData, photo: '', imageURL: '' }
       });
 
     case 'CHANGE_SELECTED_IMAGE':
       return Object.assign({}, state, {
         formData: {
           ...state.formData,
-          selectedImageForUpload: action.selectedImage,
+          photo: action.selectedImage,
           imageURL: action.imageURL
         }
       });
