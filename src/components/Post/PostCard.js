@@ -8,6 +8,8 @@ import {
 } from 'react-toolbox/lib/card';
 import { Button } from 'react-toolbox/lib/button/Button';
 
+const localHost = 'http://localhost:3001';
+
 const PostCard = ({ post }) => (
   <div className="postCard">
     <div className="postContent">
@@ -17,7 +19,10 @@ const PostCard = ({ post }) => (
           title={post.user.login}
           subtitle={post.user.name}
         />
-        <CardMedia aspectRatio="wide" image={post.photo} />
+        <CardMedia
+          aspectRatio="wide"
+          image={`${localHost}${post.picture.url}`}
+        />
         <CardTitle title={post.title} />
         <CardText>{post.content}</CardText>
         <CardActions>

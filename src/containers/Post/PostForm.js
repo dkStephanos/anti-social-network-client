@@ -20,8 +20,14 @@ class PostForm extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault();
-    debugger;
-    this.props.createPost(this.props.postFormData);
+
+    let form = new FormData(this.refs.myForm);
+    let data = this.props.postFormData;
+    data.picture = data.imageURL;
+    delete data.imageURL;
+    delete data.photo;
+
+    this.props.createPost(data);
   };
 
   handleRemoveImage = () => {
@@ -46,7 +52,7 @@ class PostForm extends Component {
     return (
       <div className="PostForm">
         Add A Post
-        <form onSubmit={this.handleOnSubmit}>
+        <form ref="myForm" onSubmit={e => this.handleOnSubmit(e)}>
           <div>
             <label htmlFor="title">Title:</label>
             <input onChange={this.handleOnChange} name="title" value={title} />
