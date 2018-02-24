@@ -3,11 +3,11 @@ import { connect } from 'react-redux';
 
 import PostForm from '../Post/PostForm';
 import UserCard from '../../components/User/UserCard';
-import { getUser } from '../../actions/user';
+import { getCurrentUser } from '../../actions/user';
 
 class User extends Component {
   componentDidMount() {
-    this.props.getUser();
+    this.props.getCurrentUser();
   }
 
   render() {
@@ -23,8 +23,8 @@ class User extends Component {
 
 const mapStateToProps = state => {
   return {
-    user: state.userReducer
+    user: state.currentUserReducer
   };
 };
 
-export default connect(mapStateToProps, { getUser })(User);
+export default connect(mapStateToProps, { getCurrentUser })(User);

@@ -7,6 +7,7 @@ import commentReducer from './reducers/commentReducer';
 import commentFormReducer from './reducers/commentFormReducer';
 import userReducer from './reducers/userReducer';
 import connectionReducer from './reducers/connectionReducer';
+import currentUserReducer from './reducers/currentUserReducer';
 
 const reducers = combineReducers({
   postReducer,
@@ -14,7 +15,8 @@ const reducers = combineReducers({
   commentReducer,
   commentFormReducer,
   userReducer,
-  connectionReducer
+  connectionReducer,
+  currentUserReducer
 });
 
 const middleware = [thunk];

@@ -6,20 +6,6 @@
   display: inline-block;
 }
 
-.add-connection-button {
-  background-color: #0077b3;
-  border-radius: 5px;
-  border-style: none;
-  color: #fff;
-  text-decoration: none;
-  text-decoration-color: white;
-}
-
-.add-connection-button:hover {
-  background-color: #0099b3;
-  color: #fff;
-}
-
 .users-list {
   overflow-y: scroll;
   flex-flow: column;

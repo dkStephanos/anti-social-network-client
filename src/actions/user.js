@@ -12,6 +12,13 @@ const setUser = user => {
   };
 };
 
+const setCurrentUser = user => {
+  return {
+    type: 'GET_CURRENT_USER_SUCCESS',
+    user
+  };
+};
+
 const setUsers = users => {
   return {
     type: 'GET_USERS_SUCCESS',
@@ -20,7 +27,7 @@ const setUsers = users => {
 };
 
 // ** Async Actions **
-export const getUser = () => {
+export const getCurrentUser = () => {
   return dispatch => {
     return fetch(`${API_URL}/currentUser`, {
       method: 'GET',
@@ -31,7 +38,7 @@ export const getUser = () => {
       }
     })
       .then(response => response.json())
-      .then(user => dispatch(setUser(user)))
+      .then(user => dispatch(setCurrentUser(user)))
       .catch(error => console.log(error));
   };
 };
