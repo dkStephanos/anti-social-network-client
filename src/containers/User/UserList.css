@@ -2,7 +2,8 @@
   width: 30%;
   height: 75%;
   margin: 0 auto;
-  padding-bottom: 3%;
+  padding: 3%;
+  display: inline-block;
 }
 
 .add-connection-button {
@@ -11,11 +12,20 @@
   border-style: none;
   color: #fff;
   text-decoration: none;
-  text-transform: none;
   text-decoration-color: white;
 }
 
 .add-connection-button:hover {
-  background-color: #0099e6;
+  background-color: #0099b3;
   color: #fff;
+}
+
+.users-list {
+  overflow-y: scroll;
+  flex-flow: column;
+  display: flex;
+  flex: 1;
+  border: 1px solid black;
+  max-height: 800px;
+  text-align: center;
 }

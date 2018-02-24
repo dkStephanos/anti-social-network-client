@@ -5,6 +5,7 @@ import ListSubHeader from 'react-toolbox/lib/list/ListSubHeader';
 import { connect } from 'react-redux';
 
 import { getConnections } from '../../actions/connections';
+import './Connections.css';
 
 class Connections extends Component {
   componentDidMount() {

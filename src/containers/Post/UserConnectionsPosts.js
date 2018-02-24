@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import PostForm from './PostForm';
 import PostCard from '../../components/Post/PostCard';
 import { getUserConnectionsPosts } from '../../actions/posts';
+import './UserConnectionsPosts.css';
 
 class UserConnectionsPosts extends Component {
   componentDidMount() {

@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../../logo.svg';
 import './UserCard.css';
+import Button from 'react-toolbox/lib/button/Button';
 
 import {
   Card,
@@ -10,7 +11,7 @@ import {
   CardActions
 } from 'react-toolbox/lib/card';
 
-const UserCard = ({ user }) => (
+const UserCard = ({ user, isConnected, handleAddConnection }) => (
   <Card className="UserCard" raised>
     <CardTitle avatar={logo} subtitle={user.name} title={user.login} />
     <CardMedia
@@ -19,7 +20,19 @@ const UserCard = ({ user }) => (
       image={user.avatar_url}
     />
     <CardText>{user.bio}</CardText>
-    <CardActions />
+    <CardActions>
+      {isConnected ? (
+        ''
+      ) : (
+        <Button
+          className="add-connection-button"
+          userid={user.id}
+          onClick={handleAddConnection}
+        >
+          Add Connection
+        </Button>
+      )}
+    </CardActions>
   </Card>
 );
 

@@ -1,0 +1,5 @@
+.usersConnectionsPosts {
+  overflow-y: scroll;
+  display: inline-block;
+  flex-flow: column;
+}

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Button from 'react-toolbox/lib/button/Button';
 
 import UserCard from '../../components/User/UserCard';
-import { getUsers } from '../../actions/user';
+import { getUsers, getUser } from '../../actions/user';
 import { getConnectionsIds, createConnection } from '../../actions/connections';
 import './UserList.css';
 
@@ -23,25 +23,23 @@ class UsersList extends Component {
   render() {
     const users = this.props.users.map(user => (
       <div key={user.id} className="user-list-item">
-        <UserCard className="user-card" user={user} />
-        {this.props.connectionsIds.includes(user.id) ? (
-          ''
-        ) : (
-          <Button
-            className="add-connection-button"
-            userid={user.id}
-            onClick={this.addConnection}
-          >
-            Add Connection
-          </Button>
-        )}
+        <UserCard
+          className="user-card"
+          user={user}
+          isConnected={
+            this.props.connectionsIds.includes(user.id) ? false : true
+          }
+          handleAddConnection={this.addConnection}
+        />
       </div>
     ));
 
     return (
       <div>
-        <h1>All Users</h1>
-        <div className="users">{users}</div>
+        <div className="users-list">
+          <h1>All Users</h1>
+          <div className="users">{users}</div>
+        </div>
       </div>
     );
   }
@@ -57,5 +55,6 @@ const mapStateToProps = state => {
 export default connect(mapStateToProps, {
   getUsers,
   getConnectionsIds,
-  createConnection
+  createConnection,
+  getUser
 })(UsersList);

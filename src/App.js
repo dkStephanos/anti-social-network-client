@@ -35,11 +35,29 @@ class App extends Component {
     this.setState({ sidebarPinned: !this.state.sidebarPinned });
   };
 
+  componentDidMount() {
+    const script1 = document.createElement('script');
+    const script2 = document.createElement('script');
+    const script3 = document.createElement('script');
+
+    script1.src =
+      'https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js';
+    script1.async = true;
+    script2.src =
+      'https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js';
+    script2.async = true;
+    script3.src = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo.js';
+    script3.async = true;
+
+    document.body.appendChild(script1);
+    document.body.appendChild(script2);
+    document.body.appendChild(script3);
+  }
+
   render() {
     const appBar = auth.loggedIn() ? (
       <AppBar
         leftIcon="menu"
-        title="Anti-Social Network"
         rightIcon="..."
         onLeftIconClick={this.toggleDrawerActive}
         onRightIconClick={this.toggleSidebar}
@@ -50,9 +68,10 @@ class App extends Component {
     );
 
     return (
-      <div className="App">
+      <div className="App" id="large-header">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <h1>Anti-Social Network</h1>
+          <canvas class="demo" id="demo-canvas" />
         </header>
         <Layout>
           <NavDrawer
@@ -100,11 +119,10 @@ class App extends Component {
             </Navigation>
           </NavDrawer>
 
-          <Panel>
+          <Panel scrollY={true} class="content">
             {appBar}
-            <div>
-              <div className="panelContent">{this.props.children}</div>
-            </div>
+
+            <div className="panel-content">{this.props.children}</div>
           </Panel>
 
           <Sidebar pinned={this.state.sidebarPinned} width={5}>
@@ -116,6 +134,8 @@ class App extends Component {
             </div>
           </Sidebar>
         </Layout>
+
+        <footer>Koi</footer>
       </div>
     );
   }

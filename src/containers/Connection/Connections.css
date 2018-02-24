@@ -1,0 +1,9 @@
+.connectionsContainer {
+  display: inline-block;
+
+  overflow-y: scroll;
+  flex-flow: column;
+  display: flex;
+
+  text-align: center;
+}
