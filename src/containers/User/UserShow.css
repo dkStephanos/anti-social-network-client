@@ -1,0 +1,32 @@
+.user-data {
+  min-width: 40%;
+  display: inline-block;
+  float: left;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 33%;
+  flex-flow: column;
+  padding-bottom: 3%;
+}
+
+.user-card {
+  height: 50%;
+}
+
+.user-posts {
+  width: 60%;
+  display: inline-block;
+  float: right;
+  overflow-y: scroll;
+  flex-flow: column;
+  display: flex;
+  border: 1px solid black;
+  max-height: 800px;
+  text-align: center;
+}
+
+.panel-content {
+  padding-top: 1%;
+  padding-right: 3%;
+  flex-wrap: wrap;
+}

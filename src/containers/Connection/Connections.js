@@ -46,7 +46,7 @@ class Connections extends Component {
 
 const mapStateToProps = state => {
   return {
-    connections: state.connectionReducer
+    connections: state.connectionReducer.connections
   };
 };
 

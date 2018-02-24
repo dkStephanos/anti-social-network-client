@@ -6,6 +6,7 @@ import UserCard from './UserCard';
 import UserPosts from '../Post/UserPosts';
 import User from './User';
 import { getUserById } from '../../actions/user';
+import './UserShow.css';
 
 class UserShow extends Component {
   componentDidMount() {
@@ -13,12 +14,13 @@ class UserShow extends Component {
   }
 
   render() {
+    debugger;
     return (
-      <div className="panelContent">
-        <div className="userData">
-          <User className="userCard" />
+      <div className="panel-content">
+        <div className="user-data">
+          <UserCard className="user-card" user={this.props.user} />
         </div>
-        <div className="userConnectionsPosts">
+        <div className="user-posts">
           <UserPosts userid={this.props.userId} />
         </div>
       </div>

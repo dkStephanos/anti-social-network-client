@@ -28,6 +28,7 @@ class UserCard extends Component {
   };
 
   render() {
+    debugger;
     return (
       <div className="user-card-container">
         <Card className="user-card" raised>
@@ -46,7 +47,7 @@ class UserCard extends Component {
           <div className="user-card-actions">
             <CardActions>
               {this.props.connectionsIds.includes(this.props.user.id) ||
-              this.props.user.id === this.props.currentUser ? (
+              this.props.user.id === this.props.currentUser.id ? (
                 ''
               ) : (
                 <Button
@@ -68,7 +69,7 @@ class UserCard extends Component {
 const mapStateToProps = state => {
   return {
     currentUser: state.currentUserReducer,
-    connectionsIds: state.connectionReducer
+    connectionsIds: state.connectionReducer.connectionsIds
   };
 };
 
