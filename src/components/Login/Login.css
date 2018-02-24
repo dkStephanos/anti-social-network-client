@@ -20,10 +20,6 @@
   padding-bottom: 20%;
 }
 
-.fake-app-bar {
-  background: lightgrey;
+.Login {
   width: 100%;
-  height: 10px;
-  display: block;
-  opacity: 50%;
 }

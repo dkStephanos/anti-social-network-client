@@ -13,7 +13,6 @@ class Login extends Component {
   render() {
     return (
       <div className="Login">
-        <span className="fake-app-bar" />
         <div className="Login-header">
           <h2 className="Login-title">Anti-Social Network</h2>
           <p className="Login-intro">

@@ -64,7 +64,7 @@ class App extends Component {
         className="app-bar"
       />
     ) : (
-      ''
+      <AppBar className="app-bar" />
     );
 
     return (
