@@ -17,6 +17,7 @@ class Connections extends Component {
   };
 
   render() {
+    debugger;
     let connections = undefined;
 
     if (this.props.connections) {

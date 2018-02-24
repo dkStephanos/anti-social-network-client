@@ -30,7 +30,7 @@ class UserShow extends Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    user: state.userReducer,
+    user: state.userReducer.user,
     userId: ownProps.match.params.userId
   };
 };

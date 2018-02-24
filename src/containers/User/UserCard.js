@@ -28,7 +28,6 @@ class UserCard extends Component {
   };
 
   render() {
-    debugger;
     return (
       <div className="user-card-container">
         <Card className="user-card" raised>
@@ -68,7 +67,7 @@ class UserCard extends Component {
 
 const mapStateToProps = state => {
   return {
-    currentUser: state.currentUserReducer,
+    currentUser: state.userReducer.currentUser,
     connectionsIds: state.connectionReducer.connectionsIds
   };
 };

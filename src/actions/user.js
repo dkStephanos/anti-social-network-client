@@ -1,4 +1,3 @@
-import { resetPostForm } from './postForm';
 import { auth } from '../utils/init';
 
 const API_URL = process.env.REACT_APP_API_URL;
