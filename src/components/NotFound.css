@@ -1,0 +1,31 @@
+.NotFound-header {
+  text-align: center;
+}
+
+.NotFound-title {
+  font-size: 6em;
+  margin: 0;
+  padding: 150px 0 25px;
+}
+
+.NotFound-intro {
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+.NotFound-buttons {
+  text-align: center;
+  padding-bottom: 20%;
+}
+
+.NotFound {
+  display: block;
+}
+
+.NotFound p {
+  color: lightgrey;
+}
+
+.home-button {
+  color: lightgrey;
+}

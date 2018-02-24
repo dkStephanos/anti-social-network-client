@@ -8,6 +8,7 @@ import store from './store.js';
 import ThemeProvider from 'react-toolbox/lib/ThemeProvider';
 import theme from './toolbox/theme';
 import Login from './components/Login/Login';
+import NotFound from './components/NotFound';
 import LoginTransition from './components/Login/LoginTransition';
 import LogoutTransition from './components/Login/LogoutTransition';
 import UserProfile from './components/User/UserProfile';
@@ -32,6 +33,7 @@ ReactDOM.render(
             <Route path="/posts" component={Posts} />
             <Route path="/postFeed" component={UserConnectionsPosts} />
             <Route exact path="/" component={Login} />
+            <Route path="*" component={NotFound} />
           </Switch>
         </App>
       </Router>

@@ -73,7 +73,7 @@ class App extends Component {
           <h1>Anti-Social Network</h1>
           <canvas class="demo" id="demo-canvas" />
         </header>
-        <Layout>
+        <Layout className="App-layout">
           <NavDrawer
             active={this.state.drawerActive}
             pinned={this.state.drawerPinned}
