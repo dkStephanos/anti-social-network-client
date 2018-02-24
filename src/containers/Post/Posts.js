@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import PostForm from './PostForm';
 import PostCard from '../../components/Post/PostCard';
 import { getPosts } from '../../actions/posts';
+import './Posts.css';
 
 class Posts extends Component {
   componentDidMount() {
@@ -18,8 +19,10 @@ class Posts extends Component {
 
     return (
       <div>
-        <h1>Posts Page</h1>
-        <div className="posts">{posts}</div>
+        <div className="posts-list">
+          <h1>Posts Page</h1>
+          <div className="posts">{posts}</div>
+        </div>
       </div>
     );
   }

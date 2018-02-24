@@ -19,8 +19,10 @@ class UserConnectionsPosts extends Component {
 
     return (
       <div>
-        <h1>Post Feed</h1>
-        <div className="usersConnectionsPosts">{posts}</div>
+        <div className="connections-posts-list">
+          <h1>Post Feed</h1>
+          <div className="connections-posts">{posts}</div>
+        </div>
       </div>
     );
   }

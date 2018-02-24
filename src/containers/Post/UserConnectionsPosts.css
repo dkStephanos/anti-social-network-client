@@ -1,5 +1,9 @@
-.usersConnectionsPosts {
+.connections-posts-list {
   overflow-y: scroll;
-  display: inline-block;
   flex-flow: column;
+  display: flex;
+  flex: 1;
+  border: 1px solid black;
+  max-height: 800px;
+  text-align: center;
 }
