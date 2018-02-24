@@ -27,7 +27,11 @@ const PostCard = ({ post }) => (
         <CardTitle title={post.title} />
         <CardText>{post.content}</CardText>
         <CardActions>
-          <Button className="add-comment-button" label="Add Comment" />
+          <Button
+            onClick={this.handleAddComment}
+            className="add-comment-button"
+            label="Add Comment"
+          />
         </CardActions>
       </Card>
     </div>

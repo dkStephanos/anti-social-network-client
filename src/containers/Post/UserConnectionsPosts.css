@@ -3,7 +3,14 @@
   flex-flow: column;
   display: flex;
   flex: 1;
-  border: 1px solid black;
   max-height: 800px;
   text-align: center;
+}
+
+.connections-posts-list-item {
+  width: 23%;
+  height: 75%;
+  margin: 0 auto;
+  padding: 3%;
+  display: inline-block;
 }
