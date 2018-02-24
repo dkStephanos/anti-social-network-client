@@ -52,7 +52,7 @@ class UserCard extends Component {
                 <Button
                   className="add-connection-button"
                   userid={this.props.user.id}
-                  onClick={this.props.handleAddConnection}
+                  onClick={this.addConnection}
                 >
                   Add Connection
                 </Button>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Button from 'react-toolbox/lib/button/Button';
 
-import UserCard from '../../components/User/UserCard';
+import UserCard from './UserCard';
 import { getUsers } from '../../actions/user';
 import './UserList.css';
 
