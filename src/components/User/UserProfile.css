@@ -1,4 +1,4 @@
-.userData {
+.user-profile-data {
   min-width: 40%;
   display: inline-block;
   float: left;
@@ -8,18 +8,14 @@
   flex-flow: column;
 }
 
-.userCard {
-  height: 50%;
-}
-
-.postFormCard {
+.post-form-card {
   display: inline-block;
   float: bottom;
   padding-top: 2%;
   flex-flow: column;
 }
 
-.userConnectionsPosts {
+.user-connections-posts {
   width: 60%;
   display: inline-block;
   float: right;
@@ -31,7 +27,7 @@
   text-align: center;
 }
 
-.panelContent {
+.user-profile-content {
   padding-top: 2%;
   padding-right: 3%;
   flex-wrap: wrap;

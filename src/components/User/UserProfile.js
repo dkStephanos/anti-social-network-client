@@ -6,15 +6,15 @@ import './UserProfile.css';
 
 const UserProfile = () => {
   return (
-    <div className="panelContent">
-      <div className="userData">
-        <User className="userCard" />
+    <div className="user-profile-content">
+      <div className="user-profile-data">
+        <User className="user-card" />
       </div>
-      <div className="userConnectionsPosts">
+      <div className="user-connections-posts">
         <UserPosts />
       </div>
-      <div className="postFormCard">
-        <PostForm className="postForm" />
+      <div className="post-form-card">
+        <PostForm className="post-form" />
       </div>
     </div>
   );

@@ -17,7 +17,7 @@ class UserShow extends Component {
     debugger;
     return (
       <div className="user-show-content">
-        <div className="user-data">
+        <div className="user-show-data">
           <UserCard className="user-card" user={this.props.user} />
         </div>
         <div className="user-posts">
