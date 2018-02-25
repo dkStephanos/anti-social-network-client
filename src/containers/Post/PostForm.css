@@ -1,4 +1,4 @@
-div.PostForm div.inline-error {
+div.post-form div.inline-error {
   padding: 5px;
   border-radius: 0 0 4px 4px;
   z-index: -1;
@@ -6,24 +6,26 @@ div.PostForm div.inline-error {
   position: relative;
 }
 
-div.PostForm {
+div.post-form {
   flex-wrap: wrap;
-  padding: 0;
   list-style-type: none;
   display: flex;
-  margin-top: 10px;
-}
-
-div.PostForm {
-  width: 150px;
+  width: 100%;
   margin-right: 10px;
   margin-bottom: 10px;
 }
 
-div.PostForm div.photo {
-  width: 150px;
-  height: 150px;
-  overflow: hidden;
+.form {
+  width: 100%;
+}
+
+h2 {
+  text-align: center;
+}
+
+div.post-form div.photo {
+  width: 100%;
+  height: 100%;
   background: #000;
   display: flex;
   border-radius: 4px;
@@ -31,7 +33,16 @@ div.PostForm div.photo {
   position: relative;
 }
 
-div.PostForm div.photo div.remove {
+div.photo img {
+  width: 100%;
+}
+
+div.photo-data {
+  width: 100%;
+  height: 250px;
+}
+
+div.post-form div.photo div.remove {
   color: #fff;
   position: absolute;
   top: 10px;
@@ -47,8 +58,148 @@ div.PostForm div.photo div.remove {
   right: 10px;
 }
 
-div.PostForm div.file-name {
-  color: #999;
+div.post-form div.file-name {
+  color: lightgrey;
   text-align: center;
   margin-top: 10px;
+  display: inline-block;
+  float: right;
+  padding-right: 5%;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.image-upload-fields {
+  padding-bottom: 8%;
+}
+
+.post-form-container {
+  background-color: rgba(72, 72, 72, 0.4);
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+  width: 100%;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+}
+
+.form-input {
+  color: #3c3c3c;
+  font-family: Robotica, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 0;
+  line-height: 22px;
+  background-color: #fbfbfb;
+  padding: 13px 13px 13px 13px;
+  margin-bottom: 10px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 3px solid rgba(0, 0, 0, 0);
+}
+
+.form-input:focus {
+  background: #fff;
+  box-shadow: 0;
+  border: 3px solid #3498db;
+  color: #3498db;
+  outline: none;
+  padding: 13px 13px 13px 13px;
+}
+
+.focused {
+  color: #30aed6;
+  border: #30aed6 solid 3px;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+}
+
+input:hover,
+textarea:hover,
+input:focus,
+textarea:focus {
+  background-color: white;
+}
+
+.submit-button {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  float: left;
+  width: 100%;
+  border: #fbfbfb solid 4px;
+  cursor: pointer;
+  background-color: #26abdd;
+  color: white;
+  font-size: 24px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
+}
+
+.submit-button:hover {
+  background-color: rgba(0, 0, 0, 0);
+  color: #26abdd;
+}
+
+.submit-button:hover {
+  color: #26abdd;
+}
+
+.ease {
+  width: 0px;
+  height: 74px;
+  background-color: #fbfbfb;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.submit:hover .ease {
+  width: 100%;
+  background-color: white;
+}
+
+.form-upload-input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.fake-btn {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  padding: 2%;
+  font-size: 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  float: left;
+  color: lightgrey;
+  width: 50%;
+}
+
+.fake-btn:hover {
+  outline: 1px dotted #000;
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+.photo-data {
+  padding: 5%;
 }

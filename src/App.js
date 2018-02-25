@@ -70,8 +70,8 @@ class App extends Component {
     return (
       <div className="App" id="large-header">
         <header className="App-header">
-          <h1>Anti-Social Network</h1>
           <canvas class="demo" id="demo-canvas" />
+          <h1 className="app-h1">Anti-Social Network</h1>
         </header>
         <Layout className="App-layout">
           <NavDrawer

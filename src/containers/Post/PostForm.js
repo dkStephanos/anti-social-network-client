@@ -50,98 +50,110 @@ class PostForm extends Component {
   render() {
     const { title, content } = this.props.postFormData;
     return (
-      <div className="PostForm">
-        Add A Post
-        <form ref="myForm" onSubmit={e => this.handleOnSubmit(e)}>
-          <div>
-            <label htmlFor="title">Title:</label>
-            <input onChange={this.handleOnChange} name="title" value={title} />
-            <label htmlFor="content">Content:</label>
-            <textarea
-              onChange={this.handleOnChange}
-              name="content"
-              value={content}
-            />
-          </div>
-
-          <div className="form-group">
-            <label>Upload Image</label>
-
+      <div className="post-form-container">
+        <h2>Add A Post</h2>
+        <div className="post-form">
+          <form
+            className="form"
+            ref="myForm"
+            onSubmit={e => this.handleOnSubmit(e)}
+          >
             <div>
               <input
-                name="image"
-                ref="imageUploadField"
-                type="file"
-                disabled={this.props.postFormStatus.isSubmittingForm}
-                accept="image/*"
-                id="image"
-                onChange={this.handleImageChange}
-                className="form-control"
+                placeholder="Title"
+                className="form-input"
+                onChange={this.handleOnChange}
+                name="title"
+                value={title}
               />
-              <label
-                disabled={this.props.postFormStatus.isSubmittingForm}
-                className="btn btn-success"
-                htmlFor="book_covers"
-              >
-                <span className="glyphicon glyphicon-cloud-upload" />
-                &nbsp; &nbsp;
-                {'Upload Image'}
-              </label>
+              <textarea
+                className="form-input"
+                onChange={this.handleOnChange}
+                name="content"
+                value={content}
+                placeholder="Content"
+              />
             </div>
 
-            <div className="photoData">
-              <div className="photo">
-                <img
-                  width={150}
-                  src={
-                    this.props.postFormData.imageURL
-                      ? this.props.postFormData.imageURL
-                      : ''
-                  }
-                  style={{ alignSelf: 'center' }}
+            <div className="form-group">
+              <div className="image-upload-fields">
+                <input
+                  name="image"
+                  ref="imageUploadField"
+                  type="file"
+                  disabled={this.props.postFormStatus.isSubmittingForm}
+                  accept="image/*"
+                  id="image-upload"
+                  onChange={this.handleImageChange}
+                  className="form-upload-input"
                 />
-                <div className="remove" onClick={this.handleRemoveImage}>
-                  <span
-                    style={{ top: 2 }}
-                    className="glyphicon glyphicon-remove"
-                  />
+                <label
+                  for="image-upload"
+                  disabled={this.props.postFormStatus.isSubmittingForm}
+                  className="fake-btn"
+                >
+                  Choose Image
+                </label>
+                <div className="file-name">
+                  {this.props.postFormData.photo.name}
                 </div>
               </div>
-              <div className="file-name">
-                {this.props.postFormData.photo.name}
+
+              <div className="photo-data">
+                <div className="photo">
+                  <img
+                    src={
+                      this.props.postFormData.imageURL
+                        ? this.props.postFormData.imageURL
+                        : ''
+                    }
+                  />
+                  <div className="remove" onClick={this.handleRemoveImage}>
+                    <span
+                      style={{ top: 2 }}
+                      className="glyphicon glyphicon-remove"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
 
-          {this.props.postFormStatus.isSubmittingForm ? (
-            <div className="progress">
-              <div
-                className={
-                  'progress-bar progress-bar-info progress-bar-striped' +
-                  (this.props.postFormStatus.submitFormProgress < 100
-                    ? 'active'
-                    : '')
-                }
-                role="progressbar"
-                aria-valuenow={this.props.postFormStatus.submitFormProgress}
-                areaValuemin="0"
-                areaValuemax="100"
-                style={{
-                  width: this.props.postFormStatus.submitFormProgress + '%'
-                }}
+            {this.props.postFormStatus.isSubmittingForm ? (
+              <div className="progress">
+                <div
+                  className={
+                    'progress-bar progress-bar-info progress-bar-striped' +
+                    (this.props.postFormStatus.submitFormProgress < 100
+                      ? 'active'
+                      : '')
+                  }
+                  role="progressbar"
+                  aria-valuenow={this.props.postFormStatus.submitFormProgress}
+                  areaValuemin="0"
+                  areaValuemax="100"
+                  style={{
+                    width: this.props.postFormStatus.submitFormProgress + '%'
+                  }}
+                >
+                  {this.props.postFormStatus.submitFormProgress}% Complete
+                </div>
+              </div>
+            ) : null}
+
+            <div className="submit">
+              <button
+                className="submit-button"
+                disabled={this.props.postFormStatus.isSubmittingForm}
+                type="submit"
               >
-                {this.props.postFormStatus.submitFormProgress}% Complete
-              </div>
+                {this.props.postFormStatus.isSubmittingForm
+                  ? 'Posting...'
+                  : 'Post'}
+              </button>
+              <div className="ease" />
             </div>
-          ) : null}
-
-          <button
-            disabled={this.props.postFormStatus.isSubmittingForm}
-            type="submit"
-          >
-            {this.props.postFormStatus.isSubmittingForm ? 'Posting...' : 'Post'}
-          </button>
-        </form>
+          </form>
+        </div>
       </div>
     );
   }
