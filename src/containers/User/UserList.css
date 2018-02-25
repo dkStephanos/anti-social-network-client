@@ -14,3 +14,7 @@
   max-height: 800px;
   text-align: center;
 }
+
+.users-list-content {
+  width: 100%;
+}

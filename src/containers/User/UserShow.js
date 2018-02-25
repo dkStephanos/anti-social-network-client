@@ -16,7 +16,7 @@ class UserShow extends Component {
   render() {
     debugger;
     return (
-      <div className="panel-content">
+      <div className="user-show-content">
         <div className="user-data">
           <UserCard className="user-card" user={this.props.user} />
         </div>

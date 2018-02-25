@@ -20,7 +20,7 @@ class UsersList extends Component {
     ));
 
     return (
-      <div>
+      <div className="users-list-content">
         <div className="users-list">
           <h1>All Users</h1>
           <div className="users">{users}</div>

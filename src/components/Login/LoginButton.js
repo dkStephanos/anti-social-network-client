@@ -11,6 +11,7 @@ class LoginButton extends Component {
   render() {
     return (
       <Button
+        className="login-button"
         raised
         accent
         href={`${authorizeUrl}?client_id=${clientId}&scope=${scope}`}

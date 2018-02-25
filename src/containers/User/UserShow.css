@@ -2,11 +2,9 @@
   min-width: 40%;
   display: inline-block;
   float: left;
-  padding-left: 5%;
   padding-right: 5%;
   height: 33%;
   flex-flow: column;
-  padding-bottom: 3%;
 }
 
 .user-card {
@@ -14,19 +12,19 @@
 }
 
 .user-posts {
-  width: 60%;
+  width: 50%;
   display: inline-block;
   float: right;
   overflow-y: scroll;
   flex-flow: column;
   display: flex;
-  border: 1px solid black;
   max-height: 800px;
   text-align: center;
 }
 
-.panel-content {
-  padding-top: 1%;
+.user-show-content {
   padding-right: 3%;
   flex-wrap: wrap;
+  padding-top: 3%;
+  width: 100%;
 }
