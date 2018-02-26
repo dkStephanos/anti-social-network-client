@@ -21,7 +21,6 @@ class PostForm extends Component {
   handleOnSubmit = event => {
     event.preventDefault();
 
-    let form = new FormData(this.refs.myForm);
     let data = this.props.postFormData;
     data.picture = data.imageURL;
     delete data.imageURL;
@@ -42,8 +41,6 @@ class PostForm extends Component {
       reader.onloadend = function(e) {
         this.props.changeSelectedImage(selectedImage, reader.result);
       }.bind(this);
-
-      let imageURL = reader.readAsDataURL(selectedImage);
     }
   };
 
@@ -107,6 +104,7 @@ class PostForm extends Component {
                         ? this.props.postFormData.imageURL
                         : ''
                     }
+                    alt="To be Uploaded"
                   />
                   <div className="remove" onClick={this.handleRemoveImage}>
                     <span

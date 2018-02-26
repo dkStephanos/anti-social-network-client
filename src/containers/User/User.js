@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
-import PostForm from '../Post/PostForm';
 import UserCard from './UserCard';
 import { getCurrentUser } from '../../actions/user';
 

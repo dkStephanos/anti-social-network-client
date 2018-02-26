@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
-import PostForm from '../Post/PostForm';
 import UserCard from './UserCard';
 import UserPosts from '../Post/UserPosts';
-import User from './User';
 import { getUserById } from '../../actions/user';
 import './UserShow.css';
 

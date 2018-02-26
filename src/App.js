@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
-import Posts from './containers/Post/Posts';
-import logo from './logo.svg';
-import Login from './components/Login/Login';
 import Connections from './containers/Connection/Connections';
 import { auth } from './utils/init';
-
-import Button from 'react-toolbox/lib/button/Button';
 import AppBar from 'react-toolbox/lib/app_bar/AppBar';
 import IconButton from 'react-toolbox/lib/button/IconButton';
 import Layout from 'react-toolbox/lib/layout/Layout';

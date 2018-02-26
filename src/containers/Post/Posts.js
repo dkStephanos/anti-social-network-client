@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
-import PostForm from './PostForm';
 import PostCard from '../../components/Post/PostCard';
 import { getPosts } from '../../actions/posts';
 import './Posts.css';
