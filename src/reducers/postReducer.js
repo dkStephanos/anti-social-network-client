@@ -4,7 +4,7 @@ export default (state = [], action) => {
       return action.posts;
 
     case 'CREATE_POST_SUCCESS':
-      return state.concat(action.post);
+      return [action.post, ...state];
 
     default:
       return state;
