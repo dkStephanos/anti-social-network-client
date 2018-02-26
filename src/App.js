@@ -75,6 +75,7 @@ class App extends Component {
         </header>
         <Layout className="App-layout">
           <NavDrawer
+            className="nav-drawer"
             active={this.state.drawerActive}
             pinned={this.state.drawerPinned}
             permanentAt="xxxl"
@@ -125,7 +126,11 @@ class App extends Component {
             <div className="panel-content">{this.props.children}</div>
           </Panel>
 
-          <Sidebar pinned={this.state.sidebarPinned} width={5}>
+          <Sidebar
+            className="side-bar"
+            pinned={this.state.sidebarPinned}
+            width={5}
+          >
             <div>
               <IconButton icon="close" onClick={this.toggleSidebar} />
             </div>

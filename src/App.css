@@ -165,3 +165,11 @@ h2 {
     transparent
   );
 }
+
+.nav-drawer {
+  background-color: #303030;
+}
+
+.side-bar {
+  background-color: #303030;
+}
