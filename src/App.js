@@ -134,8 +134,6 @@ class App extends Component {
             </div>
           </Sidebar>
         </Layout>
-
-        <footer>Koi</footer>
       </div>
     );
   }

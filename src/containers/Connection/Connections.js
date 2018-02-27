@@ -26,6 +26,7 @@ class Connections extends Component {
           avatar={connection.avatar_url}
           caption={connection.login}
           legend={connection.name}
+          className="connection-li"
           onClick={() => this.redirectToShowPage(connection)}
         />
       ));
