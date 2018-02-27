@@ -200,3 +200,8 @@
     );
   color: #fff;
 }
+
+.user-card-title,
+.add-connection-button {
+  cursor: pointer;
+}

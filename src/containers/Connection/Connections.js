@@ -18,7 +18,7 @@ class Connections extends Component {
 
   render() {
     let connections = undefined;
-
+    debugger;
     if (this.props.connections) {
       connections = this.props.connections.map(connection => (
         <ListItem
