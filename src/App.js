@@ -76,7 +76,7 @@ class App extends Component {
             permanentAt="xxxl"
             onOverlayClick={this.toggleDrawerActive}
           >
-            <Navigation type="vertical">
+            <Navigation className="navigation" type="vertical">
               <Link
                 className="navLink"
                 href="/home"
