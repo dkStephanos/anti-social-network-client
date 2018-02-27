@@ -41,6 +41,8 @@ class PostForm extends Component {
       reader.onloadend = function(e) {
         this.props.changeSelectedImage(selectedImage, reader.result);
       }.bind(this);
+
+      let imageURL = reader.readAsDataURL(selectedImage);
     }
   };
 
