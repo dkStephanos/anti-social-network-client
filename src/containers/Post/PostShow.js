@@ -26,6 +26,7 @@ class PostShow extends Component {
           )}
         </div>
         <div className="comment-form-card">
+          <h1>Add a Comment</h1>
           <CommentForm postId={this.props.postId} />
         </div>
         <div className="post-comments">
