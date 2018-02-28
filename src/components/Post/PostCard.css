@@ -188,3 +188,7 @@
     );
   color: #fff;
 }
+
+.post-card-title {
+  cursor: pointer;
+}

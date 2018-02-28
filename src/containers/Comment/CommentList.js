@@ -11,8 +11,9 @@ class CommentList extends Component {
 
   render() {
     debugger;
+    let commentTitle = 'Comments';
     let commentListItems = [];
-    if (this.props.comments) {
+    if (this.props.comments.length !== 0) {
       commentListItems = this.props.comments.map(comment => (
         <div className="comments-list-item-container">
           <div className="comments-list-item">
@@ -24,20 +25,14 @@ class CommentList extends Component {
         </div>
       ));
     } else {
-      commentListItems <<
-        (
-          <div className="comments-list-item">
-            <p>
-              <strong>No Comments</strong>
-            </p>
-          </div>
-        );
+      debugger;
+      commentTitle = 'No Comments';
     }
 
     return (
       <div>
         <div className="comments-list">
-          <h1>Comments</h1>
+          <h1>{commentTitle}</h1>
           <div className="comments">{commentListItems}</div>
         </div>
       </div>

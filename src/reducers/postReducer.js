@@ -12,7 +12,7 @@ export default (state = initialState, action) => {
       return Object.assign({}, state, { post: action.post });
 
     case 'CREATE_POST_SUCCESS':
-      return Object.assign({}, state, { posts: [action.post, ...state] });
+      return Object.assign({}, state, { posts: [action.post, ...state.posts] });
 
     default:
       return state;

@@ -4,11 +4,17 @@ import Chip from 'react-toolbox/lib/chip/Chip';
 import './UserChip.css';
 
 class UserChip extends Component {
+  redirectToShowPage = user => {
+    window.location.replace(`/users/${user.id}`);
+  };
+
   render() {
-    debugger;
     return (
       <div className="user-chip-container">
-        <Chip className="user-chip">
+        <Chip
+          onClick={() => this.redirectToShowPage(this.props.user)}
+          className="user-chip"
+        >
           <Avatar>
             <img src={this.props.user.avatar_url} />
           </Avatar>
