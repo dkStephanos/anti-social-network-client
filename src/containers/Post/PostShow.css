@@ -23,7 +23,7 @@
   width: 30%;
   min-width: 30%;
   float: right;
-  overflow-y: scroll;
+  overflow-y: auto;
   flex-flow: column;
   display: flex;
   height: 725px;
