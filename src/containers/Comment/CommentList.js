@@ -1,28 +1,44 @@
 import React, { Component } from 'react';
+import UserChip from '../../components/User/UserChip';
 import { connect } from 'react-redux';
 import { getComments } from '../../actions/comments';
-import './Posts.css';
+import './CommentList.css';
 
-class Comments extends Component {
+class CommentList extends Component {
   componentDidMount() {
-    this.props.getComments();
+    this.props.getComments(this.props.postId);
   }
 
   render() {
     debugger;
-    const comments = this.props.comments.map(comment => (
-      <div className="comments-list-item">
-        <p key={comment.id}>
-          <strong>{comment.username}:</strong> {comment.content}
-        </p>
-      </div>
-    ));
+    let commentListItems = [];
+    if (this.props.comments) {
+      commentListItems = this.props.comments.map(comment => (
+        <div className="comments-list-item-container">
+          <div className="comments-list-item">
+            <UserChip className="comment-user-chip" user={comment.user} />
+            <p className="comment-body" key={comment.id}>
+              {comment.body}
+            </p>
+          </div>
+        </div>
+      ));
+    } else {
+      commentListItems <<
+        (
+          <div className="comments-list-item">
+            <p>
+              <strong>No Comments</strong>
+            </p>
+          </div>
+        );
+    }
 
     return (
       <div>
         <div className="comments-list">
           <h1>Comments</h1>
-          <div className="comments">{comments}</div>
+          <div className="comments">{commentListItems}</div>
         </div>
       </div>
     );
@@ -31,8 +47,8 @@ class Comments extends Component {
 
 const mapStateToProps = state => {
   return {
-    comments: state.commentReducer.comments
+    comments: state.commentReducer
   };
 };
 
-export default connect(mapStateToProps, { getComments })(Comments);
+export default connect(mapStateToProps, { getComments })(CommentList);

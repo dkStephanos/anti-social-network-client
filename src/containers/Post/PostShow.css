@@ -3,7 +3,7 @@
   display: flex;
   float: left;
   padding-left: 5%;
-  padding-right: 2%;
+  padding-right: 5%;
   width: 30%;
   flex-flow: column;
   order: 1;
@@ -11,10 +11,11 @@
 
 .comment-form-card {
   display: flex;
-  padding-right: 2%;
+  padding-right: 5%;
   flex-flow: column;
   order: 2;
-  width: 15%;
+  width: 25%;
+  min-width: 15%;
   padding-top: 21.5%;
 }
 
@@ -36,5 +37,5 @@
   padding-right: 3%;
   display: flex;
   flex-direction: row;
-  padding-left: 20%;
+  padding-left: 15%;
 }

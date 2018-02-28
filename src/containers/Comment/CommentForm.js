@@ -18,12 +18,16 @@ class CommentForm extends Component {
   };
 
   handleOnSubmit = event => {
+    debugger;
     event.preventDefault();
-    this.props.createComment(this.props.commentFormData);
+    let commentProps = Object.assign({}, this.props.commentFormData, {
+      post_id: this.props.postId
+    });
+    this.props.createComment(commentProps);
   };
 
   render() {
-    const { content } = this.props.commentFormData;
+    const { body } = this.props.commentFormData;
 
     return (
       <div className="comment-form-container">
@@ -32,8 +36,8 @@ class CommentForm extends Component {
             <div>
               <textarea
                 onChange={this.handleOnChange}
-                name="content"
-                value={content}
+                name="body"
+                value={body}
                 placeholder="Comment"
                 className="form-input"
               />
@@ -53,7 +57,7 @@ class CommentForm extends Component {
 
 const mapStateToProps = state => {
   return {
-    commentFormData: state.postFormReducer
+    commentFormData: state.commentFormReducer
   };
 };
 

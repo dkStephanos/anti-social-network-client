@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PostCard from '../../components/Post/PostCard';
 import CommentForm from '../Comment/CommentForm';
+import CommentList from '../Comment/CommentList';
 import { getPostById } from '../../actions/posts';
 import './PostShow.css';
 
@@ -25,9 +26,11 @@ class PostShow extends Component {
           )}
         </div>
         <div className="comment-form-card">
-          <CommentForm />
+          <CommentForm postId={this.props.postId} />
         </div>
-        <div className="post-comments" />
+        <div className="post-comments">
+          <CommentList postId={this.props.postId} />
+        </div>
       </div>
     );
   }
