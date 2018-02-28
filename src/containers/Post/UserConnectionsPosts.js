@@ -30,7 +30,7 @@ class UserConnectionsPosts extends Component {
 
 const mapStateToProps = state => {
   return {
-    posts: state.postReducer
+    posts: state.postReducer.posts
   };
 };
 

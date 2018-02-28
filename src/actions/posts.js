@@ -12,6 +12,13 @@ const setPosts = posts => {
   };
 };
 
+const setPost = post => {
+  return {
+    type: 'GET_POST_SUCCESS',
+    post
+  };
+};
+
 const addPost = post => {
   return {
     type: 'CREATE_POST_SUCCESS',
@@ -99,6 +106,22 @@ export const createPost = post => {
         dispatch(addPost(post));
         dispatch(resetPostForm());
       })
+      .catch(error => console.log(error));
+  };
+};
+
+export const getPostById = postId => {
+  return dispatch => {
+    return fetch(`${API_URL}/posts/${postId}`, {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+        Authorization: `${token}`
+      }
+    })
+      .then(response => response.json())
+      .then(post => dispatch(setPost(post)))
       .catch(error => console.log(error));
   };
 };

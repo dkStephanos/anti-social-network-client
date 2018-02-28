@@ -1,0 +1,40 @@
+.post-show-data {
+  min-width: 25%;
+  display: flex;
+  float: left;
+  padding-left: 5%;
+  padding-right: 2%;
+  width: 30%;
+  flex-flow: column;
+  order: 1;
+}
+
+.comment-form-card {
+  display: flex;
+  padding-right: 2%;
+  flex-flow: column;
+  order: 2;
+  width: 15%;
+  padding-top: 21.5%;
+}
+
+.post-comments {
+  width: 30%;
+  min-width: 30%;
+  float: right;
+  overflow-y: scroll;
+  flex-flow: column;
+  display: flex;
+  height: 725px;
+  max-height: 800px;
+  text-align: center;
+  order: 3;
+}
+
+.post-show-content {
+  padding-top: 2%;
+  padding-right: 3%;
+  display: flex;
+  flex-direction: row;
+  padding-left: 20%;
+}

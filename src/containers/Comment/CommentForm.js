@@ -26,18 +26,26 @@ class CommentForm extends Component {
     const { content } = this.props.commentFormData;
 
     return (
-      <div>
-        <form onSubmit={this.handleOnSubmit}>
-          <div>
-            <label htmlFor="content">Comment:</label>
-            <textarea
-              onChange={this.handleOnChange}
-              name="content"
-              value={content}
-            />
-          </div>
-          <button type="submit">Add Comment</button>
-        </form>
+      <div className="comment-form-container">
+        <div className="comment-form">
+          <form className="form" onSubmit={this.handleOnSubmit}>
+            <div>
+              <textarea
+                onChange={this.handleOnChange}
+                name="content"
+                value={content}
+                placeholder="Comment"
+                className="form-input"
+              />
+            </div>
+            <div className="submit">
+              <button className="submit-button" type="submit">
+                Add Comment
+              </button>
+              <div className="ease" />
+            </div>
+          </form>
+        </div>
       </div>
     );
   }

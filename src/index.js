@@ -16,6 +16,7 @@ import UsersList from './containers/User/UsersList';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import { Switch } from 'react-router';
 import Posts from './containers/Post/Posts';
+import PostShow from './containers/Post/PostShow';
 import UserConnectionsPosts from './containers/Post/UserConnectionsPosts';
 import UserShow from './containers/User/UserShow';
 
@@ -30,6 +31,7 @@ ReactDOM.render(
             <Route path="/home" component={UserProfile} />
             <Route path="/users/:userId" component={UserShow} />
             <Route path="/users" component={UsersList} />
+            <Route path="/posts/:postId" component={PostShow} />
             <Route path="/posts" component={Posts} />
             <Route path="/postFeed" component={UserConnectionsPosts} />
             <Route exact path="/" component={Login} />

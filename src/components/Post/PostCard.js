@@ -11,7 +11,7 @@ import './PostCard.css';
 
 const localHost = 'http://localhost:3001';
 
-const PostCard = ({ post }) => (
+const PostCard = ({ post, square }) => (
   <div className="post-card-container">
     <div className="post-content">
       <Card className="post-card">
@@ -21,7 +21,7 @@ const PostCard = ({ post }) => (
           subtitle={post.user.name}
         />
         <CardMedia
-          aspectRatio="wide"
+          aspectRatio={square ? 'square' : 'wide'}
           image={`${localHost}${post.picture.url}`}
         />
         <CardTitle title={post.title} />

@@ -1,10 +1,18 @@
-export default (state = [], action) => {
+const initialState = {
+  posts: [],
+  post: {}
+};
+
+export default (state = initialState, action) => {
   switch (action.type) {
     case 'GET_POSTS_SUCCESS':
-      return action.posts;
+      return Object.assign({}, state, { posts: action.posts });
+
+    case 'GET_POST_SUCCESS':
+      return Object.assign({}, state, { post: action.post });
 
     case 'CREATE_POST_SUCCESS':
-      return [action.post, ...state];
+      return Object.assign({}, state, { posts: [action.post, ...state] });
 
     default:
       return state;
