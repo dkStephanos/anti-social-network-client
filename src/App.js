@@ -76,7 +76,7 @@ class App extends Component {
             permanentAt="xxxl"
             onOverlayClick={this.toggleDrawerActive}
           >
-            <Navigation type="vertical">
+            <Navigation className="navigation" type="vertical">
               <Link
                 className="navLink"
                 href="/home"
@@ -134,8 +134,6 @@ class App extends Component {
             </div>
           </Sidebar>
         </Layout>
-
-        <footer>Koi</footer>
       </div>
     );
   }

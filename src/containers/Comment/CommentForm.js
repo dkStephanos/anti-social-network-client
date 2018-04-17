@@ -18,26 +18,38 @@ class CommentForm extends Component {
   };
 
   handleOnSubmit = event => {
+    debugger;
     event.preventDefault();
-    this.props.createComment(this.props.commentFormData);
+    let commentProps = Object.assign({}, this.props.commentFormData, {
+      post_id: this.props.postId
+    });
+    this.props.createComment(commentProps);
   };
 
   render() {
-    const { content } = this.props.commentFormData;
+    const { body } = this.props.commentFormData;
 
     return (
-      <div>
-        <form onSubmit={this.handleOnSubmit}>
-          <div>
-            <label htmlFor="content">Comment:</label>
-            <textarea
-              onChange={this.handleOnChange}
-              name="content"
-              value={content}
-            />
-          </div>
-          <button type="submit">Add Comment</button>
-        </form>
+      <div className="comment-form-container">
+        <div className="comment-form">
+          <form className="form" onSubmit={this.handleOnSubmit}>
+            <div>
+              <textarea
+                onChange={this.handleOnChange}
+                name="body"
+                value={body}
+                placeholder="Comment"
+                className="form-input"
+              />
+            </div>
+            <div className="submit">
+              <button className="submit-button" type="submit">
+                Add Comment
+              </button>
+              <div className="ease" />
+            </div>
+          </form>
+        </div>
       </div>
     );
   }
@@ -45,7 +57,7 @@ class CommentForm extends Component {
 
 const mapStateToProps = state => {
   return {
-    commentFormData: state.postFormReducer
+    commentFormData: state.commentFormReducer
   };
 };
 

@@ -77,15 +77,21 @@ h2 {
   background-color: rgba(0, 0, 0, 0.75);
 }
 
+.navigation {
+  padding-top: 10%;
+}
+
 .navLink {
   padding-bottom: 10%;
-  background: cyan;
-  text-decoration-color: white;
+  background-color: darkgrey;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg');
+  text-decoration-color: cyan;
   text-align: center;
+  color: darkgrey !important;
 }
 
 .navLink:hover {
-  background: teal;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 @keyframes App-logo-spin {
@@ -167,9 +173,31 @@ h2 {
 }
 
 .nav-drawer {
-  background-color: #303030;
+  background: -moz-linear-gradient(
+    top,
+    rgba(31, 132, 199, 0) 0%,
+    rgba(66, 177, 228, 0.5) 50%,
+    rgba(31, 132, 199, 1) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    rgba(31, 132, 199, 0) 0%,
+    rgba(66, 177, 228, 0.5) 50%,
+    rgba(31, 132, 199, 1) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    rgba(31, 132, 199, 0) 0%,
+    rgba(66, 177, 228, 0.5) 50%,
+    rgba(31, 132, 199, 1) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(
+      startColorstr='#001f84c7',
+      endColorstr='#1f84c7',
+      GradientType=0
+    );
 }
 
 .side-bar {
-  background-color: #303030;
+  background-color: rgb(15, 15, 15);
 }

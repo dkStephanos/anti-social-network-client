@@ -27,6 +27,10 @@ class UserCard extends Component {
     this.props.createConnection(connection.currentTarget.attributes[0].value);
   };
 
+  redirectToShowPage = user => {
+    window.location.replace(`/users/${user.id}`);
+  };
+
   render() {
     return (
       <div className="user-card-container">
@@ -36,6 +40,7 @@ class UserCard extends Component {
             avatar={logo}
             subtitle={this.props.user.name}
             title={this.props.user.login}
+            onClick={() => this.redirectToShowPage(this.props.user)}
           />
           <CardMedia
             className="UserAvatar"

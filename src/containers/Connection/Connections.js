@@ -18,7 +18,7 @@ class Connections extends Component {
 
   render() {
     let connections = undefined;
-
+    debugger;
     if (this.props.connections) {
       connections = this.props.connections.map(connection => (
         <ListItem
@@ -26,6 +26,7 @@ class Connections extends Component {
           avatar={connection.avatar_url}
           caption={connection.login}
           legend={connection.name}
+          className="connection-li"
           onClick={() => this.redirectToShowPage(connection)}
         />
       ));
